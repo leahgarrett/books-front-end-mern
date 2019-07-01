@@ -10,13 +10,11 @@ class BookList extends Component {
     }
 
     handleClickBook = (book) => {
-      console.log(book)
       this.props.handleEditClick(book)
   }
 
 
   render(){
-    console.log(this.state);
       return (
         <div className="book-list">
         {this.props.books.map((item, index) => (
