@@ -87,8 +87,8 @@ class App extends Component {
     console.log('App is running render');
     return (
       <div>
-        <h1>Books {this.state.books.length}</h1>
-        <button onClick={this.handleClick}>Add</button>
+
+        
         {this.state.adding ? 
          <BookForm addNewBook={this.addNewBookHandler} /> : 
           this.state.selectedBook ? 
@@ -100,7 +100,11 @@ class App extends Component {
                 price={this.state.selectedBook.price} 
                 id={this.state.selectedBook.id} 
             /> : 
+            <>
+            <h1>Books {this.state.books.length}</h1>
+            <button onClick={this.handleClick}>Add</button>
             <BookList books={this.state.books} handleEditClick={this.handleEditClick} />
+            </>
         }
       </div>
     );

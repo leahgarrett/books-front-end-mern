@@ -1,3 +1,27 @@
+
+.book-list {
+    padding: 20px 0;
+}
+.book-list  div {
+    padding: 7px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    color: white;
+
+}
 .comedy {
-    background-color: pink;
+    background-color: darkmagenta;
+    
+  }
+
+  .drama {
+      background-color: maroon;
+  }
+
+  .action {
+    background-color: darkblue;
+  }
+
+  .thriller {
+    background-color: darkgreen;
   }
