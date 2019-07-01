@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BookForm from './components/BookForm'
+import BookList from './components/BookList'
 import './App.css';
 
 class App extends Component {
@@ -61,19 +62,7 @@ class App extends Component {
     console.log('App is running componentDidMount');
     this.loadBooks();
   }
-
-  bookList = () => {
-    return (
-      <div className="book-list">
-          {this.state.books.map((item, index) => (
-          <div onClick={() => this.handleEditClick(item)} key={index} className={item.genre}>
-            {item.genre}: {item.title} by {item.author} (rrp ${item.price}) (id: {item.id})
-          </div>
-        ))}
-        </div>
-    )
-  }
-  handleEditClick(book) {
+  handleEditClick = (book) => {
     console.log(book)
     this.setState({ selectedBook: book })
   }
@@ -111,7 +100,7 @@ class App extends Component {
                 price={this.state.selectedBook.price} 
                 id={this.state.selectedBook.id} 
             /> : 
-            this.bookList()
+            <BookList books={this.state.books} handleEditClick={this.handleEditClick} />
         }
       </div>
     );
