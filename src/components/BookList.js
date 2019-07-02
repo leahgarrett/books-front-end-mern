@@ -11,7 +11,7 @@ class BookList extends Component {
 
     handleClickBook = (book) => {
       this.props.handleEditClick(book)
-  }
+    }
 
 
   render(){
@@ -19,7 +19,7 @@ class BookList extends Component {
         <div className="book-list">
         {this.props.books.map((item, index) => (
             <div onClick={() => this.handleClickBook(item)} key={index} className={item.genre}>
-            {item.genre}: {item.title} by {item.author} (rrp ${item.price}) (id: {item.id})
+            {item.genre}: {item.title} by {item.author} (rrp <span className="price">${item.price.toFixed(2)}</span>) (id: {item.id})
             </div>
         ))}
       </div>

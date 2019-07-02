@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BookList /> renders component when there are no books 1`] = `
+<div
+  class="book-list"
+/>
+`;
+
+exports[`<BookList /> renders component when there are three books 1`] = `
+<div
+  class="book-list"
+>
+  <div
+    class="comedy"
+  >
+    comedy: Legacy Intelligent by Ms. Remington Fahey (rrp 
+    <span
+      class="price"
+    >
+      $53.70
+    </span>
+    ) (id: 1)
+  </div>
+  <div
+    class="thriller"
+  >
+    thriller: Incredible Incredible Plastic Computer by Isaac Steuber (rrp 
+    <span
+      class="price"
+    >
+      $20.99
+    </span>
+    ) (id: 2)
+  </div>
+  <div
+    class="thriller"
+  >
+    thriller: compressing Soft mint green by Kennedy Howell (rrp 
+    <span
+      class="price"
+    >
+      $68.61
+    </span>
+    ) (id: 3)
+  </div>
+</div>
+`;

@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BookForm /> renders component when there is no book data 1`] = `
+<div
+  class="book-form"
+>
+  <h1>
+    Book Form
+  </h1>
+  <form>
+    <label
+      for="title"
+    >
+      Title
+    </label>
+    <input
+      id="title"
+      placeholder="title"
+      type="text"
+      value=""
+    />
+    <label
+      for="author"
+    >
+      Author
+    </label>
+    <input
+      id="author"
+      placeholder="author"
+      type="text"
+      value=""
+    />
+    <label
+      for="genre"
+    >
+      Genre
+    </label>
+    <input
+      id="genre"
+      placeholder="genre"
+      type="text"
+      value=""
+    />
+    <label
+      for="price"
+    >
+      Price
+    </label>
+    <input
+      id="price"
+      placeholder="price"
+      type="number"
+      value="0"
+    />
+    <button>
+      Save
+    </button>
+    <button>
+      Cancel
+    </button>
+  </form>
+</div>
+`;
+
+exports[`<BookForm /> renders component when there is partial book data 1`] = `
+<div
+  class="book-form"
+>
+  <h1>
+    Book Form
+  </h1>
+  <form>
+    <label
+      for="title"
+    >
+      Title
+    </label>
+    <input
+      id="title"
+      placeholder="title"
+      type="text"
+      value="Legacy Intelligent"
+    />
+    <label
+      for="author"
+    >
+      Author
+    </label>
+    <input
+      id="author"
+      placeholder="author"
+      type="text"
+      value="Ms. Remington Fahey"
+    />
+    <label
+      for="genre"
+    >
+      Genre
+    </label>
+    <input
+      id="genre"
+      placeholder="genre"
+      type="text"
+      value=""
+    />
+    <label
+      for="price"
+    >
+      Price
+    </label>
+    <input
+      id="price"
+      placeholder="price"
+      type="number"
+      value="0"
+    />
+    <button>
+      Save
+    </button>
+    <button>
+      Cancel
+    </button>
+  </form>
+</div>
+`;
+
+exports[`<BookForm /> renders component when there is valid book data 1`] = `
+<div
+  class="book-form"
+>
+  <h1>
+    Book Form
+  </h1>
+  <form>
+    <label
+      for="title"
+    >
+      Title
+    </label>
+    <input
+      id="title"
+      placeholder="title"
+      type="text"
+      value="Legacy Intelligent"
+    />
+    <label
+      for="author"
+    >
+      Author
+    </label>
+    <input
+      id="author"
+      placeholder="author"
+      type="text"
+      value="Ms. Remington Fahey"
+    />
+    <label
+      for="genre"
+    >
+      Genre
+    </label>
+    <input
+      id="genre"
+      placeholder="genre"
+      type="text"
+      value="comedy"
+    />
+    <label
+      for="price"
+    >
+      Price
+    </label>
+    <input
+      id="price"
+      placeholder="price"
+      type="number"
+      value="53.7"
+    />
+    <button>
+      Save
+    </button>
+    <button>
+      Cancel
+    </button>
+  </form>
+</div>
+`;

@@ -9,21 +9,30 @@ class BookForm extends Component {
             author: props.author || '',
             genre: props.genre || '',
             price: props.price || 0,
-            id: props.id || 0
+            id: props.id || 0,
+            errorMessage: ''
         };
       }
 
     handleClick = (e) => {
-    e.preventDefault();
-    const newBook = {
-        title: this.state.title, 
-        author: this.state.author, 
-        genre: this.state.genre, 
-        price: this.state.price,
-        id: this.state.id 
-    }
-    console.log(newBook)
-    this.props.addNewBook(newBook)
+      e.preventDefault();
+      const newBook = {
+          title: this.state.title, 
+          author: this.state.author, 
+          genre: this.state.genre, 
+          price: this.state.price,
+          id: this.state.id 
+      }
+      let errorMessage = '';
+      if (this.state.title.length === 0) {
+        errorMessage = 'Title cannot be empty';
+      }
+      if (errorMessage.length) {
+        this.setState({errorMessage});
+      }
+      else {
+        this.props.addNewBook(newBook)
+      }
     }
 
   handleChange = (e) => {
@@ -31,10 +40,10 @@ class BookForm extends Component {
   }
 
   render(){
-    console.log(this.state);
       return (
         <div className="book-form">
           <h1>Book Form</h1>
+          {this.state.errorMessage.length > 0 && <div className="error">{this.state.errorMessage}</div>}
           <form>
             <label htmlFor="title">Title</label>
               <input 
