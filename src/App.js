@@ -67,7 +67,7 @@ class App extends Component {
     this.setState({ adding: true });
   }
 
-  addNewBookHandler = (newBook) => {
+  createAndUpdateBookHandler = (newBook) => {
     if (newBook.id) {
       this.updateBook(newBook);
     }
@@ -82,10 +82,10 @@ class App extends Component {
     return (
       <div>
         {this.state.adding ? 
-         <BookForm formTitle='New' addNewBook={this.addNewBookHandler} /> : 
+         <BookForm formTitle='New' bookHandler={this.createAndUpdateBookHandler} /> : 
           this.state.selectedBook ? 
             <BookForm 
-                addNewBook={this.addNewBookHandler} 
+                bookHandler={this.createAndUpdateBookHandler} 
                 formTitle='Edit'
                 title={this.state.selectedBook.title} 
                 author={this.state.selectedBook.author} 

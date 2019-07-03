@@ -62,7 +62,7 @@ class BookForm extends Component {
           price: Number(this.state.price), // convert to number before saving in DB
           id: this.state.id 
       }
-      this.props.addNewBook(newBook)
+      this.props.bookHandler(newBook)
     }
   }
 
