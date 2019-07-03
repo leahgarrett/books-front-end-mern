@@ -35,7 +35,7 @@ describe('<BookForm /> rendering', () => {
     it("renders component when there is no book data", () => {
         const wrapper = render(
             <BookForm 
-                addNewBook={() => {}} 
+                bookHandler={() => {}} 
             />
         );
         expect(wrapper).toMatchSnapshot();
@@ -44,7 +44,7 @@ describe('<BookForm /> rendering', () => {
     it("renders component when there is valid book data", () => {
         const wrapper = render(
             <BookForm 
-                addNewBook={() => {}} 
+                bookHandler={() => {}} 
                 title={books3[1].title} 
                 author={books3[1].author} 
                 genre={books3[1].genre} 
@@ -58,7 +58,7 @@ describe('<BookForm /> rendering', () => {
     it("renders component when there is partial book data", () => {
         const wrapper = render(
             <BookForm 
-                addNewBook={() => {}} 
+                bookHandler={() => {}} 
                 title={books3[1].title} 
                 author={books3[1].author} 
             />
@@ -72,7 +72,7 @@ describe('<BookForm /> validation', () => {
       const spy = sinon.spy();
       const wrapper = mount(
           <BookForm 
-              addNewBook={() => {spy()}} 
+              bookHandler={() => {spy()}} 
               title={books3[0].title} 
               author={books3[0].author} 
               genre={books3[0].genre} 
@@ -88,7 +88,7 @@ describe('<BookForm /> validation', () => {
     const spy = sinon.spy();
     const wrapper = mount(
         <BookForm 
-            addNewBook={() => {spy()}} 
+            bookHandler={() => {spy()}} 
             author={books3[0].author} 
             genre={books3[0].genre} 
             price={books3[0].price} 
@@ -103,7 +103,7 @@ describe('<BookForm /> validation', () => {
     const spy = sinon.spy();
     const wrapper = mount(
         <BookForm 
-            addNewBook={() => {spy()}} 
+            bookHandler={() => {spy()}} 
             title={books3[0].title} 
             genre={books3[0].genre} 
             price={books3[0].price} 
@@ -118,7 +118,7 @@ describe('<BookForm /> validation', () => {
     const spy = sinon.spy();
     const wrapper = mount(
         <BookForm 
-            addNewBook={() => {spy()}} 
+            bookHandler={() => {spy()}} 
             title={books3[0].title} 
             author={books3[0].author} 
             price={books3[0].price} 
@@ -133,7 +133,7 @@ describe('<BookForm /> validation', () => {
     const spy = sinon.spy();
     const wrapper = mount(
         <BookForm 
-            addNewBook={() => {spy()}} 
+            bookHandler={() => {spy()}} 
             title={books3[0].title} 
             author={books3[0].author} 
             genre={books3[0].genre} 
@@ -148,7 +148,7 @@ describe('<BookForm /> validation', () => {
     const spy = sinon.spy();
     const wrapper = mount(
         <BookForm 
-            addNewBook={() => {spy()}} 
+            bookHandler={() => {spy()}} 
             title={books3[0].title} 
             author={books3[0].author} 
             genre={books3[0].genre} 
@@ -164,7 +164,7 @@ describe('<BookForm /> validation', () => {
     const spy = sinon.spy();
     const wrapper = mount(
         <BookForm 
-            addNewBook={() => {spy()}} 
+            bookHandler={() => {spy()}} 
             title={books3[0].title} 
             author={books3[0].author} 
             genre={books3[0].genre} 

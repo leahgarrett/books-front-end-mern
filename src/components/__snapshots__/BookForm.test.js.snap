@@ -5,7 +5,7 @@ exports[`<BookForm /> rendering renders component when there is no book data 1`]
   class="book-form"
 >
   <h1>
-    Book Form
+     Book
   </h1>
   <form>
     <label
@@ -53,7 +53,7 @@ exports[`<BookForm /> rendering renders component when there is no book data 1`]
       value="0"
     />
     <button>
-      Save
+      Submit
     </button>
     <button>
       Cancel
@@ -67,7 +67,7 @@ exports[`<BookForm /> rendering renders component when there is partial book dat
   class="book-form"
 >
   <h1>
-    Book Form
+     Book
   </h1>
   <form>
     <label
@@ -115,7 +115,7 @@ exports[`<BookForm /> rendering renders component when there is partial book dat
       value="0"
     />
     <button>
-      Save
+      Submit
     </button>
     <button>
       Cancel
@@ -129,7 +129,7 @@ exports[`<BookForm /> rendering renders component when there is valid book data 
   class="book-form"
 >
   <h1>
-    Book Form
+     Book
   </h1>
   <form>
     <label
@@ -177,7 +177,7 @@ exports[`<BookForm /> rendering renders component when there is valid book data 
       value="20.99"
     />
     <button>
-      Save
+      Submit
     </button>
     <button>
       Cancel
