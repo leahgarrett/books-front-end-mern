@@ -65,6 +65,14 @@ describe("<BookList />", () => {
       expect(text.includes('comedy')).toEqual(true);
     });
 
+    it("contains the book title", () => {
+      const wrapper = mount(
+        <BookList books={[books3[0]]} handleEditClick={() => {}} />
+      );
+      const text = wrapper.find(".comedy").text();
+      expect(text.includes('Legacy Intelligent')).toEqual(true);
+    });
+
 
     it("calls the edit method on click", () => {
       const spy = sinon.spy();

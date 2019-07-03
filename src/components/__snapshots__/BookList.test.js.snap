@@ -17,7 +17,9 @@ exports[`<BookList /> renders component when there are three books 1`] = `
   >
     comedy
     : 
-    Legacy Intelligent
+    <h2>
+      Legacy Intelligent
+    </h2>
      by 
     Ms. Remington Fahey
      (rrp 
@@ -38,7 +40,9 @@ exports[`<BookList /> renders component when there are three books 1`] = `
   >
     thriller
     : 
-    Incredible Incredible Plastic Computer
+    <h2>
+      Incredible Incredible Plastic Computer
+    </h2>
      by 
     Isaac Steuber
      (rrp 
@@ -59,7 +63,9 @@ exports[`<BookList /> renders component when there are three books 1`] = `
   >
     thriller
     : 
-    compressing Soft mint green
+    <h2>
+      compressing Soft mint green
+    </h2>
      by 
     Kennedy Howell
      (rrp 

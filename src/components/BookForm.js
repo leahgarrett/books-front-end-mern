@@ -13,25 +13,52 @@ class BookForm extends Component {
         };
       }
 
-    handleClick = (e) => {
+  checkValidPrice = () => {
+    // require two decimal places
+    var regex  = /^\d+(?:\.\d{0,2})$/;
+    if (regex.test(this.state.price)){
+      return true;
+    }
+    console.log('Invalid number - requires two characters after decimal')
+    return false;
+  }
+
+  checkExists = () => {
+    if ( this.state.title.length > 0 
+      && this.state.author.length > 0  
+      && this.state.genre.length > 0 
+      && (this.state.price.length > 0)
+    ) {
+      return true;
+    }
+    console.log('Missing field')
+    return false;
+  }
+
+  checkValid = () => {
+    return this.checkExists() && this.checkValidPrice() 
+  }
+
+  handleClick = (e) => {
     e.preventDefault();
-    const newBook = {
-        title: this.state.title, 
-        author: this.state.author, 
-        genre: this.state.genre, 
-        price: this.state.price,
-        id: this.state.id 
+
+    if (this.checkValid()) {
+      const newBook = {
+          title: this.state.title, 
+          author: this.state.author, 
+          genre: this.state.genre, 
+          price: Number(this.state.price), // convert to number before saving in DB
+          id: this.state.id 
+      }
+      this.props.addNewBook(newBook)
     }
-    console.log(newBook)
-    this.props.addNewBook(newBook)
-    }
+  }
 
   handleChange = (e) => {
-    this.setState({ [e.target.id]: e.target.value})
+    this.setState({ [e.target.id]: e.target.value, errorMessages: [] })
   }
 
   render(){
-    console.log(this.state);
       return (
         <div className="book-form">
           <h1>Book Form</h1>
@@ -77,6 +104,5 @@ class BookForm extends Component {
     }
 }
 
-
-  export default BookForm;
+export default BookForm;
 
