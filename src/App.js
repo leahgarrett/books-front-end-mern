@@ -14,19 +14,16 @@ class App extends Component {
   }
 
   loadBooks = () => {
-    console.log('loading books')
     const url = 'http://localhost:5000/books';
     fetch(url)
     .then(resp => resp.json())
     .then(data => {
-      console.log(data)
       this.setState({ books: data, adding: false, selectedBook: null });
     })
   }
   createBook = (book) => {
     const url = 'http://localhost:5000/books/newbook';
     const data = JSON.stringify(book);
-    console.log(data)
       return fetch(url, {
           method: 'POST', 
           headers: {
@@ -59,7 +56,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('App is running componentDidMount');
     this.loadBooks();
   }
   handleEditClick = (book) => {
@@ -72,7 +68,6 @@ class App extends Component {
   }
 
   addNewBookHandler = (newBook) => {
-    console.log(newBook);
     if (newBook.id) {
       this.updateBook(newBook);
     }
@@ -84,11 +79,8 @@ class App extends Component {
   }
 
   render() {
-    console.log('App is running render');
     return (
       <div>
-
-        
         {this.state.adding ? 
          <BookForm addNewBook={this.addNewBookHandler} /> : 
           this.state.selectedBook ? 
