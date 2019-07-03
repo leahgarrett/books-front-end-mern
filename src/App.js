@@ -67,6 +67,10 @@ class App extends Component {
     this.setState({ adding: true });
   }
 
+  handleCancel = () => {
+    this.setState({ adding: false, selectedBook: null });
+  }
+
   createAndUpdateBookHandler = (newBook) => {
     if (newBook.id) {
       this.updateBook(newBook);
@@ -82,10 +86,11 @@ class App extends Component {
     return (
       <div>
         {this.state.adding ? 
-         <BookForm formTitle='New' bookHandler={this.createAndUpdateBookHandler} /> : 
+         <BookForm formTitle='New' bookHandler={this.createAndUpdateBookHandler} handleCancel={this.handleCancel}/> : 
           this.state.selectedBook ? 
             <BookForm 
                 bookHandler={this.createAndUpdateBookHandler} 
+                handleCancel={this.handleCancel}
                 formTitle='Edit'
                 title={this.state.selectedBook.title} 
                 author={this.state.selectedBook.author} 

@@ -115,7 +115,7 @@ class BookForm extends Component {
               />
 
               <button onClick={this.handleClick}>Submit</button>
-              <button onClick={this.handleCancel}>Cancel</button>
+              <button onClick={this.props.handleCancel}>Cancel</button>
           </form>
         </div>
       );
