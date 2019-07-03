@@ -73,7 +73,7 @@ class BookForm extends Component {
   render(){
       return (
         <div className="book-form">
-          <h1>Book Form</h1>
+          <h1>{this.props.formTitle} Book</h1>
           {this.state.formErrorMessage.length > 0 && <h3 className="error">{this.state.formErrorMessage}</h3>}
           <form>
             <label htmlFor="title">Title</label>
@@ -114,7 +114,7 @@ class BookForm extends Component {
                 value={this.state.price} 
               />
 
-              <button onClick={this.handleClick}>Save</button>
+              <button onClick={this.handleClick}>Submit</button>
               <button onClick={this.handleCancel}>Cancel</button>
           </form>
         </div>

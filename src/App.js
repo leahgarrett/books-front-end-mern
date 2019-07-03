@@ -82,10 +82,11 @@ class App extends Component {
     return (
       <div>
         {this.state.adding ? 
-         <BookForm addNewBook={this.addNewBookHandler} /> : 
+         <BookForm formTitle='New' addNewBook={this.addNewBookHandler} /> : 
           this.state.selectedBook ? 
             <BookForm 
                 addNewBook={this.addNewBookHandler} 
+                formTitle='Edit'
                 title={this.state.selectedBook.title} 
                 author={this.state.selectedBook.author} 
                 genre={this.state.selectedBook.genre} 
