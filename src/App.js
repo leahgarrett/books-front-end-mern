@@ -94,7 +94,7 @@ class App extends Component {
                 id={this.state.selectedBook.id} 
             /> : 
             <>
-            <h1>Books {this.state.books.length}</h1>
+            {this.state.books.length === 0 ? <h1>Loading...</h1> : <h1>Books {this.state.books.length}</h1>}
             <button onClick={this.handleClick}>Add</button>
             <BookList books={this.state.books} handleEditClick={this.handleEditClick} />
             </>
