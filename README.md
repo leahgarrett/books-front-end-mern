@@ -67,7 +67,7 @@ display a different background color for each genre
 ## Demo branch
 This was created from the code walk through in the master branch. 
 
-Changes made on this branch were from the [Testing React](https://gist.github.com/leahgarrett/3bd31429fecc898e00c3ddc39e87dad1) code walk through. Also included are changes made during the challenge review.
+Changes made on this branch were from the [Testing React](https://gist.github.com/leahgarrett/3bd31429fecc898e00c3ddc39e87dad1) code walk through. Also included are changes made during the challenge review up to step 8.
 
 
 Changes to implement the tests include
